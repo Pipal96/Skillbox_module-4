@@ -1,0 +1,280 @@
+:root {
+    --skillbox-blue: #2f1ce4;
+    --skillbox-white: #eaeaea;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('../fonts/GraphikLCG-Medium.woff2') format('woff2'),
+    url('../fonts/GraphikLCG-Medium.woff') format('woff');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+    url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+    url('../fonts/Gilroy-ExtraBold.woff') format('woff');
+    font-display: swap;
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+    url('../fonts/Gilroy-Medium.woff') format('woff');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gilroy', sans-serif;
+}
+
+.wave {
+    font-family: 'Gilroy', sans-serif;
+    padding-bottom: 620px;
+    background-image: url("../img/background.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol {
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .4px;
+    color: #222020;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    display: block;
+}
+
+.return {
+    padding-left: 40px;
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    font-family: "Graphik LCG", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 3.11;
+    letter-spacing: .18px;
+    color: #222020;
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.wrapper-in-wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.main-headline {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: .48px;
+    color: #222020;
+    padding-left: 40px;
+    margin: 95px 0 75px;
+}
+
+.card__wrapper {
+    padding-left: 53px;
+}
+
+.card {
+    width: 480px;
+    min-height: 505px;
+    box-shadow: -2.9px 1px 20px 0 rgba(83, 83, 83, 0.31);
+    display: inline-block;
+    margin-bottom: 60px;
+    position: relative;
+    vertical-align: middle;
+}
+
+/*Задай отступ всем нетечным карточкам*/
+.card:nth-child(odd) {
+    margin-right: 60px;
+}
+
+.card__picture {
+    width: 100%;
+    min-height: 176px;
+    background-repeat: no-repeat;
+}
+
+/*Найди в 1 карточке из 4 класс пикча*/
+.card:nth-child(1) > .card__picture {
+    background-image: url("../img/photo-1530435460869-d13625c69bbf.png");
+}
+
+/*Найди в 2 карточке из 4 класс пикча*/
+.card:nth-child(2) > .card__picture {
+    background-image: url("../img/photo-1516101922849-2bf0be616449.png");
+}
+
+/*Найди в 3 карточке из 4 класс пикча*/
+.card:nth-child(3) > .card__picture {
+    background-image: url("../img/photo-1507721999472-8ed4421c4af2.png");
+}
+
+/*Найди в 4 карточке из 4 класс пикча*/
+.card:nth-child(4) > .card__picture {
+    background-image: url("../img/photo-1539278670307-a69d04dc8a75.png");
+}
+
+.card__headline {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.56;
+    letter-spacing: .36px;
+    color: var(--skillbox-blue);
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.card-list__item {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 0.16px;
+
+    color: #222020;
+    margin-bottom: 21px;
+}
+
+.card__number {
+    position: absolute;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: .48px;
+    color: var(--skillbox-white);
+    right: 23px;
+    bottom: 29px;
+}
+
+.button__layout {
+    text-align: center;
+}
+
+.button__module {
+    border-radius: 2px;
+    border: solid 3px var(--skillbox-blue);
+
+    background-color: transparent;
+    color: var(--skillbox-blue);
+    opacity: 1;
+    cursor: pointer;
+
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: .18px;
+
+    text-align: center;
+    padding: 28px 79px;
+
+    transition-duration: .2s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+.button__module:hover {
+    opacity: .6;
+}
+
+@media all and (max-width: 1080px) {
+    .list {
+        width: 480px;
+
+        margin: 0 auto;
+    }
+
+    .card:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .main-headline {
+        text-align: center;
+
+        padding: 0;
+    }
+
+    .wave {
+        padding-bottom: 420px;
+    }
+
+    .wrapper {
+        padding: 0 20px;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .list {
+        width: 380px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .wave {
+        padding-bottom: 320px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .main-headline {
+        font-size: 2.9rem;
+
+        margin: 35px 0 75px;
+    }
+
+    .list {
+        width: 320px;
+    }
+
+    .card__wrapper {
+        padding-left: 40px;
+    }
+
+    .wave {
+        padding-bottom: 220px;
+    }
+}
